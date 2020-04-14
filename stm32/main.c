@@ -22,20 +22,20 @@ int main (void) {
 	
 	// mode selection
 	GPIOB->MODER |= 0x2 << 12; // set port B6 as i2c for its AF
-	GPIOB->MODER |= 0x2 << 18; // set port B7 as i2c for its AF
+	GPIOB->MODER |= 0x2 << 14; // set port B7 as i2c for its AF
 	
 	//output type (open drain for I2C)
 	GPIOB->OTYPER |= 0x1 << 6; // B6 as open drain
-	GPIOB->OTYPER |= 0x1 << 9; // B7 as open drain
+	GPIOB->OTYPER |= 0x1 << 7; // B7 as open drain
 	
 	//output speed is low speed, for all io on port B
 	//GPIOB->OSPEEDR |= 0;
 	
 	GPIOB->PUPDR &= ~(3<<12); // no pull ups/downs as we already have them on the mp6050
-	GPIOB->PUPDR &= ~(3<<18);
+	GPIOB->PUPDR &= ~(3<<14);
 	// set the gpios as AF
 	GPIOB->AFR[0]	|= (0x4) << 24;  // This sets PB7 alternate function 4 (I2C 1)
-	GPIOB->AFR[1] |= (0x4) << 4;				// this sets PB8	(I2C 1)
+	GPIOB->AFR[0] |= (0x4) << 28;				// this sets PB8	(I2C 1)
 	
 	//I2C reg stuff
 	 

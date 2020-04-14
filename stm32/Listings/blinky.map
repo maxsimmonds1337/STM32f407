@@ -456,7 +456,7 @@ Image Symbol Table
     __semihosting_library_function           0x080002e3   Thumb Code     0  indicate_semi.o(.text)
     SystemInit                               0x080002e5   Thumb Code    82  system_stm32f4xx.o(i.SystemInit)
     delay                                    0x08000349   Thumb Code    16  main.o(i.delay)
-    main                                     0x0800035d   Thumb Code   252  main.o(i.main)
+    main                                     0x0800035d   Thumb Code   250  main.o(i.main)
     _fp_init                                 0x08000469   Thumb Code    10  fpinit.o(x$fpl$fpinit)
     __fplib_config_fpu_vfp                   0x08000471   Thumb Code     0  fpinit.o(x$fpl$fpinit)
     __fplib_config_pureend_doubles           0x08000471   Thumb Code     0  fpinit.o(x$fpl$fpinit)
@@ -570,12 +570,12 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       288         20          0          5          0       2630   main.o
-        64         26        392          0       1536        856   startup_stm32f407xx.o
-       100         18          0          0          0        517   system_stm32f4xx.o
+       288         22          0          5          0       2582   main.o
+        64         26        392          0       1536        840   startup_stm32f407xx.o
+       100         18          0          0          0        501   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-       452         64        424          8       1536       4003   Object Totals
+       452         66        424          8       1536       3923   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0          0          3          0          0   (incl. Padding)
 
@@ -626,9 +626,9 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       748         80        424          8       1632       4347   Grand Totals
-       748         80        424          8       1632       4347   ELF Image Totals
-       748         80        424          8          0          0   ROM Totals
+       748         82        424          8       1632       4267   Grand Totals
+       748         82        424          8       1632       4267   ELF Image Totals
+       748         82        424          8          0          0   ROM Totals
 
 ==============================================================================
 
