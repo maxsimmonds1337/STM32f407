@@ -29,10 +29,13 @@ Project File Date:  11/09/2020
 Rebuild target 'Target 1'
 assembling startup_stm32f407xx.s...
 compiling main.c...
+main.c(58): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		speed = ((HAL_count_frozen * cir/hall_counts_per_rot) / 0.5) * mps_mph; // calculate the speed, in mph
+main.c: 1 warning, 0 errors
 compiling system_stm32f4xx.c...
 linking...
-Program Size: Code=748 RO-data=424 RW-data=8 ZI-data=1632  
-".\Objects\Speedo.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=2384 RO-data=424 RW-data=24 ZI-data=1632  
+".\Objects\Speedo.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
